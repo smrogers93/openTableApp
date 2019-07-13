@@ -17,25 +17,11 @@ app.use(express.json());
 var tables = [
   {
     routeName: "home",
-    name: "Yoda",
-    role: "Jedi Master",
-    age: 900,
-    forcePoints: 2000
+    name: "Bob",
+    phone: "704-555-1212",
+    email: bob@jane.com,
+    userName: Bobbaroo
   },
-  {
-    routeName: "darthmaul",
-    name: "Darth Maul",
-    role: "Sith Lord",
-    age: 200,
-    forcePoints: 1200
-  },
-  {
-    routeName: "obiwankenobi",
-    name: "Obi Wan Kenobi",
-    role: "Jedi Master",
-    age: 55,
-    forcePoints: 1350
-  }
 ];
 
 // Routes
