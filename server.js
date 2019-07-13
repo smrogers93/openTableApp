@@ -17,7 +17,7 @@ app.use(express.json());
 var tables = [
   {
     routeName: "home",
-    ID: 097,
+    id: 097,
     name: "Bob",
     phone: "704-555-1212",
     email: "bob@gmail.com",
@@ -68,7 +68,7 @@ app.post("/api/tables", function(req, res) {
 
   console.log(newReservation);
 
-  characters.push(newReservation);
+  tables.push(newReservation);
 
   res.json(newReservation);
 });
