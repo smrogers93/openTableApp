@@ -4,10 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Hot Restaurants</title>
-  <link rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
@@ -20,11 +18,25 @@
       <h1><span class="fa fa-fire"></span>Hot Restaurants</h1>
       <hr>
       <h3>We only have 5 tables! Book your seat before they all are gone!</h3>
-      <a href="/add"><button class="btn btn-primary btn-lg"><span class="fa fa-list-alt"></span> View Tables</button></a>
-      <a href="/api/characters"><button class="btn btn-danger btn-lg"><span
-            class="fa fa-credit-card"></span> Make Reservation</button></a>
+      <a href="/tables"><button class="btn btn-primary btn-lg"><span class="fa fa-list-alt"></span> View
+          Tables</button></a>
+      <a href="/reserve"><button class="btn btn-danger btn-lg"><span class="fa fa-credit-card"></span> Make
+          Reservation</button></a>
     </div>
-    
+
+    <footer class="footer mt-4">
+      <div class="container">
+        <p>Control Panel</p>
+        <p>
+          <a href="#" id="clear">Clear Table</a>
+          " | "
+          <a href="/api/tables" id="clear">API Table Link</a>
+          " | "
+          <a href="/api/waitlist" id="clear">API Wait List</a>
+        </p>
+      </div>
+    </footer>
+  </div>
 </body>
 
 </html>
