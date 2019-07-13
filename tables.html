@@ -37,27 +37,11 @@
                 <li class="list-group-item mt-4">
                     <h2>Table #1</h2>
                     <hr>
-                    <h2>ID: tonyTiger</h2>
-                    <h2>Name: Tony</h2>
-                    <h2>Email: tonytheTiger2gmail.com</h2>
-                    <h2>Phone: 6969696969</h2>
+                    <h2 id="id">ID: tonyTiger</h2>
+                    <h2 id="name">Name: Tony</h2>
+                    <h2 id="email">Email: tonytheTiger2gmail.com</h2>
+                    <h2 id="phone">Phone: 6969696969</h2>
                 </li>
-                <li class="list-group-item mt-4">
-                    <h2>Table #2</h2>
-                    <hr>
-                    <h2>ID: tonyTiger</h2>
-                    <h2>Name: Tony</h2>
-                    <h2>Email: tonytheTiger2gmail.com</h2>
-                    <h2>Phone: 6969696969</h2>
-                </li>
-                <li class="list-group-item mt-4">
-                    <h2>Table #3</h2>
-                    <hr>
-                    <h2>ID: tonyTiger</h2>
-                    <h2>Name: Tony</h2>
-                    <h2>Email: tonytheTiger2gmail.com</h2>
-                    <h2>Phone: 6969696969</h2>
-                </li>    
             </ul>
           </div>
         </div>    
@@ -87,6 +71,25 @@
 </footer>
 </div>
 
+<script type="text/javascript">
+  $( document ).ready(function() {
+
+    $.get("/reservations", function(data) {
+      console.log(data);
+      for (var i=0; i<data.length;i++){
+        if (data) {
+          $("#id").text(data[i].id);
+          $("#name").text(data[i].name);
+          $("#email").text(data[i].email);
+          $("#phone").text(data[i].phone);
+        } else {
+          console.log("Reservations not found.");
+        }
+      }
+    });
+  });
+
+</script>
 </body>
 
 </html>
