@@ -17,11 +17,11 @@ app.use(express.json());
 var tables = [
   {
     routeName: "home",
+    ID: 097,
     name: "Bob",
     phone: "704-555-1212",
-    email: bob@jane.com,
-    userName: Bobbaroo
-  },
+    email: "bob@gmail.com",
+  }
 ];
 
 // Routes
@@ -43,7 +43,7 @@ app.get("/api/tables", function(req, res) {
 
 // Displays waitlist, or returns false
 app.get("/api/tables/:waitlist", function(req, res) {
-  var chosen = req.params.character; //NOT SURE HERE
+  var chosen = req.params.tables; 
 
   console.log(chosen);
 
@@ -70,7 +70,7 @@ app.post("/api/tables", function(req, res) {
 
   characters.push(newReservation);
 
-  res.json(new);
+  res.json(newReservation);
 });
 
 // Starts the server to begin listening
